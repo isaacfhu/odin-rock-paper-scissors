@@ -1,2 +1,2 @@
 # odin-rock-paper-scissors
-Rock Papers Scissors project in Foundations, Odin Project.
+My Rock Papers Scissors project being tutored by Foundations, Odin Project.
