@@ -1,25 +1,29 @@
-function getComputerChoice() {
-    let computerChoice = Math.floor(Math.random() * 3) + 1
-    console.log("computer choice : " + computerChoice)
-    if (computerChoice === 1)
-        return "Rock";
-    else if (computerChoice === 2)
-        return "Paper";
-    else 
-        return "Scissors";
-}
+let computerScore = 0
+let humanScore = 0
 
-function getHumanChoice() {
-    let humanChoice = prompt("hi")
-    console.log("human choice : " + humanChoice)
-
-    if (humanChoice == "rock" || 1)
+function getChoice(choice) {
+    if (choice == "rock" || 1)
         return "Rock"
-    else if (humanChoice == "paper" || 2)
+    else if (choice == "paper" || 2)
         return "Paper"
     else
         return "Scissors"
 }
 
-getComputerChoice()
-getHumanChoice()
+function getComputerChoice() {
+    let choice = Math.floor(Math.random() * 3) + 1
+    return getChoice(choice)
+}
+
+function getHumanChoice() {
+    let choice = prompt("hi")
+    return getChoice(choice.toLowerCase)
+}
+
+function playRound() {
+    let humanChoice = getHumanChoice()
+    let computerChoice = getComputerChoice()
+    console.log(computerChoice + " " + humanChoice)
+}
+
+playRound()
