@@ -1,6 +1,5 @@
 # odin-rock-paper-scissors
-My Rock Papers Scissors project being tutored by Foundations, Odin Project.
-
+My Rock Papers Scissors project.
 
 Logic:
 Game start >
@@ -21,6 +20,9 @@ Game start >
     Output WIN/LOSE/DRAW
 
 Game end
+
+Thanks to Odin Project Foundations and keithdhd in this post: https://gist.github.com/keithdhd/a4de0856a2b4ba156bd8b8a4516d621e
+Which helped me through out this exercise. :)
 
     
     
