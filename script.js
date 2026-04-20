@@ -18,7 +18,7 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-    let choice = prompt("Rock Paper Scissors... Shoot!")
+    let choice = prompt(`Rock Paper Scissors... Shoot! (${rounds}/${MAX_ROUNDS})`)
     return getChoice(choice.toLowerCase())
 }
 
@@ -55,7 +55,7 @@ function playRound() {
 
 function playGame() {
     console.log('Game Started.')
-    for (let i = 1; i <= MAX_ROUNDS; i++ ) {
+    for (rounds = 1; rounds <= MAX_ROUNDS; rounds++ ) {
         playRound()
     }
 
