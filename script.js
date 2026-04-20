@@ -1,5 +1,7 @@
 let computerScore = 0
 let humanScore = 0
+let rounds = 0
+const MAX_ROUNDS = 5
 
 function getChoice(choice) {
     if (choice == "rock" || choice == 1)
@@ -16,11 +18,13 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-    let choice = prompt("hi")
+    let choice = prompt("Rock Paper Scissors... Shoot!")
     return getChoice(choice.toLowerCase())
 }
 
-function playRound(humanChoice, computerChoice) {
+function playRound() {
+    const humanChoice = getHumanChoice()
+    const computerChoice = getComputerChoice()
     let outcome
 
     if (humanChoice == computerChoice)
@@ -46,8 +50,22 @@ function playRound(humanChoice, computerChoice) {
     console.log(`Current Score: `)
     console.log(`You: ${humanScore}`)
     console.log(`Computer: ${computerScore}`)
+    console.log("---------------------------------")
 }
 
-const humanSelection = getHumanChoice()
-const computerSelection = getComputerChoice()
-playRound(humanSelection, computerSelection)
+function playGame() {
+    console.log('Game Started.')
+    for (let i = 1; i <= MAX_ROUNDS; i++ ) {
+        playRound()
+    }
+
+    if (humanScore == computerScore)
+        console.log("Too bad! The game ended in a DRAW.")
+    else if (humanScore > computerScore)
+        console.log("Congratulations! You WIN.")
+    else
+        console.log("Too bad! You LOST.")
+    console.log("Feel free to Refresh the page to play again!")
+}
+
+playGame()
